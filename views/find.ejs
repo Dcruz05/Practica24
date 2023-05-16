@@ -12,8 +12,9 @@
         <div class="card-header">
           <h2>Buscar</h2>
         </div>
+        <% //usamos este form para recibir informacion y buscarla usando el metodo post para que no aparezca en nuestra barra de busqueda %>
         <div class="card-body">
-          <form action="find" method="post">
+          <form action="find" method="post"> 
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre"><br>
             <input type="submit" class="agregar-btn" value="Buscar">
@@ -34,7 +35,7 @@
           </thead>
   
           <tbody>
-            <% //Mostramos la informacion usando un for para mostrar los elementos de la variable data %>
+            <% //Mostramos la informacion usando un for para mostrar los elementos de la variable data con la informacion de nuestra busqeda %>
               <% for (let i = 0; i < data.length; i++) { %>
                   <tr>
                       <td><%=data[i].Nombre%></td>
